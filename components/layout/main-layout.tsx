@@ -90,7 +90,7 @@ export function MainLayout({ children }: MainLayoutProps) {
     { name: "Customer Reviews", href: "/reviews", icon: Star },
     { name: "Billing System", href: "/billing", icon: CreditCard },
     { name: "Food Delivery", href: "/food-delivery", icon: Utensils },
-    { name: "Bookings", href: "/bookings", icon: BookOpen },
+    { name: "Bookings", href: "/booking", icon: BookOpen },
     { name: "Try Premium", href: "/premium", icon: Award },
   ]
 
@@ -189,7 +189,7 @@ export function MainLayout({ children }: MainLayoutProps) {
                           ? "Billing System"
                           : pathname === "/food-delivery"
                             ? "Food Delivery"
-                            : pathname === "/bookings"
+                            : pathname === "/booking"
                               ? "Bookings"
                               : pathname === "/premium"
                                 ? "Premium Version"

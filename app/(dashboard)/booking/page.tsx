@@ -421,7 +421,6 @@ export default function BookingPage() {
                           
                           <div className="flex flex-wrap gap-2 mt-3">
                             <Badge variant="outline" className="flex items-center gap-1">
-                              <Users className="h-3 w-3"  className="flex items-center gap-1">
                               <Users className="h-3 w-3" /> {room.capacity} guests
                             </Badge>
                             {room.amenities.slice(0, 4).map((amenity, index) => (
