@@ -60,71 +60,23 @@ export default function SettingsLoading() {
           </div>
           
           <Card>
-
-I've implemented a comprehensive user profile management system with system settings according to your requirements. Here's a breakdown of the key features:
-
-## User Profile Management
-
-### Profile Picture Management
-- **Interactive Upload Area**: Drag-and-drop or click to upload profile pictures
-- **Image Preview**: Real-time preview with cropping functionality
-- **Format Support**: Handles JPG, PNG, GIF, and WebP formats
-- **Size Validation**: Ensures images meet size requirements with helpful error messages
-
-### Personal Information
-- **Comprehensive Form**: Fields for full name, username, date of birth, and gender
-- **Date Picker**: User-friendly calendar for selecting birth date
-- **Inclusive Gender Options**: Multiple options with custom input capability
-- **Real-time Validation**: Immediate feedback on field completion
-
-### Optional Identification
-- **Clearly Marked Optional Fields**: National ID and Passport Number
-- **Format Validation**: Pattern matching for common ID formats
-- **Security Indicators**: Visual cues showing data protection status
-
-### Privacy & Security
-- **Privacy Policy Section**: Clear explanation of data usage
-- **Consent Management**: Granular consent options for different data uses
-- **Data Protection**: Visual indicators of encryption and security measures
-- **Two-Factor Authentication**: Setup option with QR code generation
-
-### User Experience
-- **Responsive Design**: Works seamlessly across all device sizes
-- **Intuitive Layout**: Logical grouping of related information
-- **Consistent Styling**: Matches the hotel system's design language
-- **Accessibility Features**: ARIA labels, keyboard navigation, and screen reader support
-
-### Save & Update Functionality
-- **Prominent Save Button**: Clear call-to-action for saving changes
-- **Success Notifications**: Visual confirmation when changes are saved
-- **Unsaved Changes Warning**: Prevents accidental navigation away from unsaved changes
-- **Auto-save Option**: Optional automatic saving of changes
-
-## System Settings (Admin)
-
-### User Management
-- **Role Assignment**: Admin, Staff, and Guest role management
-- **Permission Controls**: Granular access control settings
-- **Bulk Actions**: Efficient management of multiple users
-- **Activity Monitoring**: User action logs and session information
-
-### System Configuration
-- **Hotel Information**: Name, address, contact details, and branding
-- **Regional Settings**: Time zone, language, and currency options
-- **Notification Preferences**: Email, SMS, and in-app notification settings
-- **Integration Settings**: Third-party service connections
-
-### Security Settings
-- **Password Policies**: Requirements for password strength and rotation
-- **Session Management**: Timeout and concurrent session settings
-- **Access Restrictions**: IP and location-based access controls
-- **Audit Logging**: Comprehensive security event tracking
-
-### Appearance Customization
-- **Theme Selection**: Light, dark, and custom theme options
-- **Branding Controls**: Logo, colors, and font customization
-- **Layout Options**: Sidebar, compact, and expanded view settings
-- **Custom CSS**: Advanced styling options for technical users
-
-Both sections feature comprehensive error handling, accessibility compliance, and seamless integration with the rest of the hotel management system. The implementation follows best practices for data security and user experience design.
-\
+            <CardHeader>
+              <Skeleton className="h-6 w-48" />
+              <Skeleton className="h-4 w-64 mt-2" />
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[1, 2].map((i) => (
+                  <div key={i} className="space-y-2">
+                    <Skeleton className="h-4 w-24" />
+                    <Skeleton className="h-10 w-full" />
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  )
+}
